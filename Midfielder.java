@@ -4,7 +4,7 @@ public class Midfielder extends Player {
     private int technique;
     
     public Midfielder(String name, int skill, int confidence, int stamina, int vision, int technique) {
-        super(name, skill, confidence, stamina, "Mental Focus");
+        super(name, skill, confidence, stamina);
         this.vision = vision;
         this.technique = technique;
     }
@@ -20,19 +20,6 @@ public class Midfielder extends Player {
     public int calculateSaveAbility() {
         int baseSave = (skill + vision) / 2;
         return Math.min(60, baseSave);
-    }
-    
-    @Override
-    public void useSpecialAbility() {
-        if (!abilityUsed && abilityTimer == 0) {
-            System.out.println(ColorUtil.colorize("🧠 " + name + " uses MENTAL FOCUS! 🧠", ColorUtil.PURPLE));
-            System.out.println(ColorUtil.colorize("Technique and vision enhanced!", ColorUtil.GREEN));
-            confidence += 15;
-            technique += 10;
-            vision += 10;
-            abilityUsed = true;
-            abilityTimer = 3; // 3 turn cooldown
-        }
     }
     
     @Override

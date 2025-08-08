@@ -4,7 +4,7 @@ public class Defender extends Player {
     private int leadership;
     
     public Defender(String name, int skill, int confidence, int stamina, int strength, int leadership) {
-        super(name, skill, confidence, stamina, "Iron Will");
+        super(name, skill, confidence, stamina);
         this.strength = strength;
         this.leadership = leadership;
     }
@@ -20,18 +20,6 @@ public class Defender extends Player {
     public int calculateSaveAbility() {
         int baseSave = (skill + leadership + strength) / 3;
         return Math.min(70, baseSave);
-    }
-    
-    @Override
-    public void useSpecialAbility() {
-        if (!abilityUsed && abilityTimer == 0) {
-            System.out.println(ColorUtil.colorize("⚔️ " + name + " shows IRON WILL! ⚔️", ColorUtil.RED));
-            System.out.println(ColorUtil.colorize("Unshakeable determination activated!", ColorUtil.GREEN));
-            confidence += 30; // Biggest confidence boost
-            stamina += 20;
-            abilityUsed = true;
-            abilityTimer = 6; // 6 turn cooldown (longest)
-        }
     }
     
     @Override

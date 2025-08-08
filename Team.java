@@ -76,14 +76,5 @@ public class Team {
     public void resetStats() {
         goalsScored = 0;
         goalsConceded = 0;
-        // Reset player abilities
-        striker.setAbilityUsed(false);
-        striker.setAbilityTimer(0);
-        goalkeeper.setAbilityUsed(false);
-        goalkeeper.setAbilityTimer(0);
-        midfielder.setAbilityUsed(false);
-        midfielder.setAbilityTimer(0);
-        defender.setAbilityUsed(false);
-        defender.setAbilityTimer(0);
     }
 }
