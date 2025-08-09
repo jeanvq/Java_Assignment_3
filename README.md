@@ -1,4 +1,4 @@
-# ⚽ Penalty Shootout: Legends Edition
+# ⚽ UEFA Penalty: Legends Edition
 
 A simple Java console-based penalty shootout game where you face off against the computer in a best-of-5 penalty challenge. Choose your favorite team, take shots, make saves, and see who wins the match!
 
@@ -26,4 +26,4 @@ A simple Java console-based penalty shootout game where you face off against the
 2. Open your terminal and navigate to the game folder.
 3. Compile the game:
    ```bash
-   javac PenaltyGame.java
+   javac UEFA Penalty.java
