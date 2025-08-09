@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PenaltyGameWithPlayerSelection {
+public class UEFAPenalty {
     private Scanner scanner;
     private Random random;
     private Team playerTeam;
@@ -15,7 +15,7 @@ public class PenaltyGameWithPlayerSelection {
     private static final int MAX_ROUNDS = 5;
     private static final String[] GOAL_POSITIONS = {"Left", "Center", "Right"};
 
-    public PenaltyGameWithPlayerSelection() {
+    public UEFAPenalty() {
         scanner = new Scanner(System.in);
         random = new Random();
         playerScore = 0;
@@ -387,7 +387,7 @@ public class PenaltyGameWithPlayerSelection {
     }
     
     public static void main(String[] args) {
-        PenaltyGameWithPlayerSelection game = new PenaltyGameWithPlayerSelection();
+        UEFAPenalty game = new UEFAPenalty();
         game.play();
     }
 }
